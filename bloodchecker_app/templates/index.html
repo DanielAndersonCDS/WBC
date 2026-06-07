@@ -301,7 +301,7 @@ let counts = {}, history = [], limit = 100;
 CELLS.forEach(c => { counts[c.id] = 0; });
 
 /* ─── SOUND ─── */
-let audioCtx=null,soundOn=false,instrument='piano',volume=0.6;
+let audioCtx=null,soundOn=true,instrument='piano',volume=0.6;
 function getCtx(){ if(!audioCtx) audioCtx=new(window.AudioContext||window.webkitAudioContext)(); return audioCtx; }
 function playNote(freq,type){
   type=type||instrument; if(!soundOn) return;
